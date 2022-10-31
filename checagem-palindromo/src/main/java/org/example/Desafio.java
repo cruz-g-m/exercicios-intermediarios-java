@@ -28,6 +28,15 @@ public class Desafio {
         Scanner sc = new Scanner(System.in);
         String palavra = sc.nextLine();
 
+        String invertida = new StringBuilder(palavra).reverse().toString();
+
+        if(palavra.equals(invertida)){
+            System.out.println("TRUE");
+        }
+        else {
+            System.out.println("FALSE");
+        }
+
         //TODO: Retorne TRUE ou FALSE, caso a "palavra" seja ou não um Palíndromo.
     }
 }

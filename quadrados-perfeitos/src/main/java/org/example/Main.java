@@ -25,16 +25,20 @@ public class Main {
         int n = Integer.parseInt(new Scanner(System.in).nextLine());
 
         int[] d = new int[n + 1];
+        int menorNumero = 0;
 
         for (int i = 1; i < n; i++) {
-            if(d[i] < n){
-                d[i] = i * i;
-                System.out.println(d[i]);
+            if(Math.sqrt(i) * Math.sqrt(i) == i){
+                if (i * i > n){
+                    //System.out.println(i);
+                    menorNumero++;
+                }
             }
         }
+        if(n % 2 != 0){
+            menorNumero--;
+        }
+        System.out.println(menorNumero);
 
-//TENTAR USAR AS NEXT
-        // TENTAR USAR ITERABLE
-        //TODO: Com base no valor total, retorne o menor número de quadrados perfeitos.
     }
 }
